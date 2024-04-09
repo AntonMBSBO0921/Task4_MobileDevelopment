@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    tools:ignore="MissingDefaultResource">
+
+    <View
+        android:id="@+id/album_cover_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFA500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/album_cover_placeholder"
+        app:layout_constraintBottom_toBottomOf="@id/album_cover_placeholder"
+        app:layout_constraintStart_toEndOf="@id/album_cover_placeholder"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlayPause" />
+
+    <ImageButton
+        android:id="@+id/buttonPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintTop_toTopOf="@id/album_cover_placeholder"
+        app:layout_constraintBottom_toBottomOf="@id/album_cover_placeholder"
+        app:layout_constraintStart_toEndOf="@id/textViewTitle"
+        app:layout_constraintEnd_toStartOf="@id/buttonNext" />
+
+    <ImageButton
+        android:id="@+id/buttonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:src="@android:drawable/ic_media_ff"
+        app:layout_constraintTop_toTopOf="@id/album_cover_placeholder"
+        app:layout_constraintBottom_toBottomOf="@id/album_cover_placeholder"
+        app:layout_constraintStart_toEndOf="@id/buttonPlayPause"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

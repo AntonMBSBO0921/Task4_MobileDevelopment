@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/buttonMirea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Message"
+            android:layout_centerInParent="true"/>
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Age"
+            android:layout_above="@id/buttonMirea"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/editTextJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Job"
+            android:layout_above="@id/editTextAge"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/editTextMirea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonMirea"
+            android:layout_centerHorizontal="true"
+            android:text="TextView" />
+
+    </RelativeLayout>
+</layout>
